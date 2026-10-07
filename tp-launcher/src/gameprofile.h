@@ -115,6 +115,12 @@ inline const GameProfile &lollipopProfile()
         {
             QStringLiteral("--gpu_plugin=xenos"),
             QStringLiteral("--license_mask=1"),
+            // Title requirement (same class as Real Steel): the game
+            // issues texture fetches with 'invalid' fetch constants
+            // constantly, and without the runtime's tolerance flag
+            // those draws flash white (proven in the first verdict
+            // run's log, 2026-10-07). Not a user preference.
+            QStringLiteral("--gpu_allow_invalid_fetch_constants=true"),
         },
         QStringLiteral("#ff4fa3"), // hot pink (drives the .qss)
         QStringLiteral("Re-Cherry Launcher"),
