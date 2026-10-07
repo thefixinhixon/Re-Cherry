@@ -3,7 +3,7 @@
 //
 // This file is yours to edit. 'rexglue migrate' will NOT overwrite it.
 
-#include "generated/re_cherry_init.h"
+#include "generated/default/re_cherry_init.h"
 
 #include "re_cherry_app.h"
 

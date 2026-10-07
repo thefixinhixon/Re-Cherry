@@ -4,7 +4,7 @@
 #include <cctype>
 #include <string>
 
-#include <generated/re_cherry_init.h>
+#include "generated/default/re_cherry_init.h"
 #include <rex/cvar.h>
 #include <rex/runtime.h>
 #include <rex/system/flags.h>
