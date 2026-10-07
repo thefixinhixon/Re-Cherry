@@ -38,6 +38,61 @@
 0x82A3EC70 = {}  # GetField_0x18 — return *(this + 0x18)
 0x82CBEC90 = {}  # → sub_82CC35C0 (0x8 bytes)
 0x82CA8D30 = {}  # → sub_82CA8E18 (0x88 bytes)
+
+# Round 1 hints (2026-10-07): call targets the analyzer left unresolved
+# on the first pass (from codegen log). Forcing them as function
+# entries so call sites link instead of emitting REX_FATAL stubs.
+0x82BD124C = {}  # round1: unresolved call target
+0x82BD3EA0 = {}  # round1: unresolved call target
+0x82BD3F44 = {}  # round1: unresolved call target
+0x82BD4708 = {}  # round1: unresolved call target
+0x82BD4D44 = {}  # round1: unresolved call target
+0x82BD53B0 = {}  # round1: unresolved call target
+0x82BD5A04 = {}  # round1: unresolved call target
+0x82BD8030 = {}  # round1: unresolved call target
+0x82BD8FE0 = {}  # round1: unresolved call target
+0x82BDE634 = {}  # round1: unresolved call target
+0x82BDEAAC = {}  # round1: unresolved call target
+0x82BDF8A0 = {}  # round1: unresolved call target
+0x82BDFB8C = {}  # round1: unresolved call target
+0x82BDFDD8 = {}  # round1: unresolved call target
+0x82BE484C = {}  # round1: unresolved call target
+0x82BE76A8 = {}  # round1: unresolved call target
+0x82BE7B04 = {}  # round1: unresolved call target
+0x82BE7B20 = {}  # round1: unresolved call target
+0x82BE7B90 = {}  # round1: unresolved call target
+0x82BF8E28 = {}  # round1: unresolved call target
+0x82BF911C = {}  # round1: unresolved call target
+0x82BF99E0 = {}  # round1: unresolved call target
+# Round 2 hints (2026-10-07): branch targets inside shared bodies that
+# the analyzer left as REX_FATAL branch stubs. Hinting them as entries
+# makes codegen split at the target so branches become tail calls
+# (same technique as Pacific Rim round 2).
+0x822C5104 = {}  # round2: unresolved branch target
+0x82848550 = {}  # round2: unresolved branch target
+0x82A3D9B0 = {}  # round2: unresolved branch target
+0x82A3D9DC = {}  # round2: unresolved branch target
+0x82A3D9FC = {}  # round2: unresolved branch target
+0x82A3DA18 = {}  # round2: unresolved branch target
+0x82BD3F5C = {}  # round2: unresolved branch target
+0x82BD4940 = {}  # round2: unresolved branch target
+0x82BD80EC = {}  # round2: unresolved branch target
+0x82BDA0FC = {}  # round2: unresolved branch target
+0x82BDE7B0 = {}  # round2: unresolved branch target
+0x82BDEF2C = {}  # round2: unresolved branch target
+0x82BDFF60 = {}  # round2: unresolved branch target
+0x82BE31F0 = {}  # round2: unresolved branch target
+0x82BE48C4 = {}  # round2: unresolved branch target
+0x82BE48DC = {}  # round2: unresolved branch target
+0x82BE6258 = {}  # round2: unresolved branch target
+0x82BE6584 = {}  # round2: unresolved branch target
+0x82BE7A08 = {}  # round2: unresolved branch target
+0x82BE7CB0 = {}  # round2: unresolved branch target
+0x82BF8078 = {}  # round2: unresolved branch target
+0x82BF984C = {}  # round2: unresolved branch target
+0x82BF98AC = {}  # round2: unresolved branch target
+0x82BF99C4 = {}  # round2: unresolved branch target
+
 [[midasm_hook]]
 address = 0x829EAA14
 name = "fps"
