@@ -1,0 +1,11 @@
+<RCC>
+    <!-- Art + theme, embedded so the binary is self-contained.
+         Lollipop Chainsaw ("Re-Cherry Launcher") resources. -->
+    <qresource prefix="/assets">
+        <file alias="banner.png">assets-lollipop/banner.png</file>
+        <file alias="icon.png">assets-lollipop/icon.png</file>
+    </qresource>
+    <qresource prefix="/theme">
+        <file alias="lollipop.qss">theme/lollipop.qss</file>
+    </qresource>
+</RCC>
